@@ -92,6 +92,50 @@ public class GraphFactory {
         graph.addDirectedEdge(7, 6);
         graph.addDirectedEdge(6, 8);
 
+        return graph;
+    }
+
+    public static GraphWithMatrix getDirectedGraphWithCycle() {
+        GraphWithMatrix graph = new GraphWithMatrix(9);
+        graph.addDirectedEdge(1, 2);
+        graph.addDirectedEdge(2, 5);
+        graph.addDirectedEdge(2, 8);
+        graph.addDirectedEdge(8, 9);
+        graph.addDirectedEdge(3, 4);
+        graph.addDirectedEdge(4, 5);
+        graph.addDirectedEdge(5, 7);
+        graph.addDirectedEdge(7, 1);
+
+        return graph;
+    }
+
+    public static GraphWithMatrix getDisconnectedDirectedGraphWithCycle() {
+        GraphWithMatrix graph = new GraphWithMatrix(9);
+        graph.addDirectedEdge(1, 2);
+        graph.addDirectedEdge(2, 5);
+        graph.addDirectedEdge(2, 8);
+        graph.addDirectedEdge(8, 9);
+        graph.addDirectedEdge(3, 4);
+        graph.addDirectedEdge(4, 5);
+        graph.addDirectedEdge(5, 9);
+        graph.addDirectedEdge(6, 7);
+        graph.addDirectedEdge(7, 6);
+
+        return graph;
+    }
+
+    public static GraphWithMatrix getDisconnectedDirectedGraphWithNoCycle() {
+        GraphWithMatrix graph = new GraphWithMatrix(10);
+        graph.addDirectedEdge(1, 2);
+        graph.addDirectedEdge(2, 5);
+        graph.addDirectedEdge(2, 8);
+        graph.addDirectedEdge(8, 9);
+        graph.addDirectedEdge(3, 4);
+        graph.addDirectedEdge(4, 5);
+        graph.addDirectedEdge(5, 9);
+        graph.addDirectedEdge(6, 7);
+        graph.addDirectedEdge(7, 10);
+        graph.addDirectedEdge(6, 10);
 
         return graph;
     }

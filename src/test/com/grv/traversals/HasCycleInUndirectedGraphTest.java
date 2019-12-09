@@ -1,7 +1,7 @@
 package test.com.grv.traversals;
 
 import main.com.grv.GraphWithMatrix;
-import main.com.grv.traversals.HasCycleInUndirectedGraph;
+import main.com.grv.traversals.DetectCycleInUndirectedGraph;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import test.com.grv.GraphFactory;
@@ -14,18 +14,18 @@ class HasCycleInUndirectedGraphTest {
     @Test
     public void test1() {
         GraphWithMatrix graph = GraphFactory.getGraphWithMatrixConnectedWithCycle();
-        Assertions.assertEquals(true, HasCycleInUndirectedGraph.hasCycleUsingDFS(graph));
+        Assertions.assertEquals(true, DetectCycleInUndirectedGraph.hasCycleUsingDFS(graph));
     }
 
     @Test
     public void test2() {
         GraphWithMatrix graph = GraphFactory.getGraphWithMatrixConnectedWithFourCycle();
-        Assertions.assertEquals(true, HasCycleInUndirectedGraph.hasCycleUsingDFS(graph));
+        Assertions.assertEquals(true, DetectCycleInUndirectedGraph.hasCycleUsingDFS(graph));
     }
 
     @Test
     public void test3() {
         GraphWithMatrix graph = GraphFactory.getGraphWithMatrixConnectedWithoutCycle();
-        Assertions.assertEquals(false, HasCycleInUndirectedGraph.hasCycleUsingDFS(graph));
+        Assertions.assertEquals(false, DetectCycleInUndirectedGraph.hasCycleUsingDFS(graph));
     }
 }

@@ -30,7 +30,7 @@ public class Kruskal {
     }
 
     /*
-    * Unite two sets of 2 vertex
+    * Uniting two sets
     * */
     private static void union(int v1, int v2, int[] parent) {
         parent[v2] = v1;
@@ -52,6 +52,7 @@ public class Kruskal {
         int[] parent = new int[graph.getSize()];
         int cost = 0;
 
+        // Making initial n set
         for(int i = 1; i < parent.length; i++) {
             parent[i] = i;
         }

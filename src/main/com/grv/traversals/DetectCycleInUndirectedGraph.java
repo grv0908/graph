@@ -6,7 +6,7 @@ import main.com.grv.GraphWithMatrix;
  * @author Gaurav Rajput
  * Created on 08/12/19
  */
-public class HasCycleInUndirectedGraph {
+public class DetectCycleInUndirectedGraph {
     public static boolean hasCycleUsingDFS(GraphWithMatrix graph) {
         boolean[] visited = new boolean[graph.getSize()];
 

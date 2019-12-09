@@ -15,7 +15,7 @@ public class TopologicalSort {
     public static ArrayList<Integer> topologicalSort(GraphWithMatrix graph) {
         ArrayList<Integer> order = new ArrayList<>();
         boolean[] visited = new boolean[graph.getSize()];
-        
+
         for (int i = 1; i < graph.getSize(); i++) {
             if(!visited[i])
                 dfs(graph, i, order, visited);
